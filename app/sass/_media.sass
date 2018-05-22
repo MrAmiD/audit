@@ -21,14 +21,64 @@
         display: block
         min-width: 500px
         width: 100%
+  #my-header
+    .discriptor
+      font-size: 22px
+    .phone-c a
+      font-size: 20px
+  .main-win-sec
+    background-position: left center
+  .main-win-sec .main-win-r .main-win-c
+    width: 100%
+    max-width: 100%
+  .main-win-sec .main-win-r .main-win-c b
+    font-size: 37px
+  .main-win-sec .main-win-r .main-win-c strong
+    font-size: 37px
+    text-align: center
+    justify-content: center
+  .scroll-mouse
+    display: none
 //Small: ≥576px
 +media-breakpoint-down(sm)
-  /**/
+  #my-header
+    .lvl1-rh
+      .logo-cc
+        order: 1
+      .discriptor-cc
+        order: 3
+        margin-top: 10px
+      .phone-cc
+        order: 2
+
 //Extra small: >0
 +media-breakpoint-down(xs)
-	/**/
-
-
+  .main-menu ul
+    display: none
+  #my-header
+    .phone-cc
+      padding: 15px 0px
+      border-top: solid 1px $grey-l
+      margin-top: 20px
+      .phone-c
+        justify-content: center
+    .discriptor-cc
+      background: $grey-l
+      padding: 15px
+      margin-top: 0px!important
+    .menu-cc
+      display: block
+      order: 2
+      .menu-m-b
+        justify-content: flex-end
+  .main-win-sec
+    background-position: 39%
+  .main-win-sec .main-win-r .main-win-c p
+    font-size: 17px
+  #my-header .lvl1-rh
+    padding-bottom: 0px
+  .standart-sec .h2
+    font-size: 24px
 /*==========  Mobile First  ==========*/
 
 //Extra small: <576px

@@ -172,12 +172,12 @@ $(function() {
     });
     api.bind( "open:start", function() {
         $(window).scroll();
-        $(".mm-menu.mm-offcanvas.mm-bottom").css('height', $(window).height() - $('#my-header').height() + $(window).scrollTop());
+        $(".mm-menu.mm-offcanvas.mm-bottom").css('height', $(window).height() - $('#my-header .phone-cc').offset().top + $(window).scrollTop());
         //bugfix fixed menu 2
         $("#my-header").css({ top: $(window).scrollTop() });
     });
     api.bind( "open:before", function() {
-        $('#my-menu').css('top', $('#my-header').outerHeight() - $(window).scrollTop());
+        $('#my-menu').css('top', $('#my-header .phone-cc').offset().top - $(window).scrollTop());
     });
     api.bind( "close:finish", function() {
         $("#menu-btn").removeClass('is-active');
