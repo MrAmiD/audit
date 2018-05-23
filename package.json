@@ -1,5 +1,5 @@
 {
-  "name": "optimizedhtml",
+  "name": "audit",
   "version": "2.0.1",
   "description": "OptimizedHTML - Start HTML Template",
   "main": "index.js",
@@ -24,5 +24,14 @@
     "gulp-uglify": "^2.1.2",
     "gulp-util": "^3.0.8",
     "vinyl-ftp": "^0.6.0"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrAmiD/audit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MrAmiD/audit/issues"
+  },
+  "homepage": "https://github.com/MrAmiD/audit#readme"
 }
