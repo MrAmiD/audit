@@ -1454,7 +1454,15 @@ html.mm-opening .mm-menu~.mm-slideout
 		background: #f3f3f3
 		padding: 30px 30px
 		padding-bottom: 137px
-
+	&.other-n
+		border: none
+	&.other-n, &.type-p
+		&>.container
+			padding-bottom: 30px
+	&.type-p
+		border: none
+		.content
+			margin-top: 15px
 .fancybox-button--thumbs
 	display: none
 .feedback-slider
@@ -1694,6 +1702,40 @@ html.mm-opening .mm-menu~.mm-slideout
 				a
 					color: $accent2
 
+.fb-b-sec
+	.fb-b-cc
+		.fb-b-r
+			margin-bottom: 15px
+			.fb-b-c
+				background: $accent
+				.fb-b-i
+					width: 100%
+					position: relative
+					padding: 50px 34px
+					.h2
+						font-size: 36px
+						font-weight: 900
+						margin-bottom: 15px
+					p
+						margin-bottom: 0px
+						font-size: 24px
+						line-height: normal
+					a.js-popupbtn
+						font-weight: 900
+						text-decoration: underline
+					*
+						color: #ffffff
+					&:after
+						content: ''
+						position: absolute
+						width: 0
+						height: 0
+						border-style: solid
+						border-width: 15px 9.5px 0 9.5px
+						border-color: $accent transparent transparent transparent
+						bottom: -15px
+						left: 50%
+						transform: translate(-50%, 0)
 
 /*Project end*/
 
