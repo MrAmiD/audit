@@ -393,11 +393,11 @@ html.mm-opening .mm-menu~.mm-slideout
 		color: $dark
 		line-height: normal
 	b
-		font-size: 16px
+		font-size: 14px
 		font-weight: 900
 		line-height: normal
 	p
-		font-size: 16px
+		font-size: 14px
 		margin-bottom: 20px
 		font-weight: 500
 		line-height: normal
@@ -1363,7 +1363,7 @@ html.mm-opening .mm-menu~.mm-slideout
 					padding: 30px 0px
 				a
 					&:hover
-						text-decoration: none
+						text-decoration: none!important
 					.title-n
 						font-size: 18px
 						font-weight: 900
@@ -1418,6 +1418,9 @@ html.mm-opening .mm-menu~.mm-slideout
 			justify-content: space-between
 			height: 100%
 			width: 100%
+			a
+				&:hover
+					text-decoration: none!important
 			.title-n
 				font-size: 16px
 				font-weight: 600
@@ -1443,29 +1446,30 @@ html.mm-opening .mm-menu~.mm-slideout
 					background-size: cover
 					background-repeat: no-repeat
 					transition: all .3s ease
-				.date-b
-					color: #ffffff
-					position: absolute
-					left: 0px
-					top: 0px
-					font-size: 11px
-					background: $accent
-					width: 95px
-					text-align: center
-					font-family: $default-font2
-					line-height: 27px
-					white-space: nowrap
-					height: 19px
-					&:after
-						content: ''
-						position: absolute
-						top: 19px
-						left: 0px
-						width: 0
-						height: 0
-						border-style: solid
-						border-width: 14px 47.5px 0 47.5px
-						border-color: $accent transparent transparent transparent
+
+.date-b
+	color: #ffffff
+	position: absolute
+	left: 0px
+	top: 0px
+	font-size: 11px
+	background: $accent
+	width: 95px
+	text-align: center
+	font-family: $default-font2
+	line-height: 27px
+	white-space: nowrap
+	height: 19px
+	&:after
+		content: ''
+		position: absolute
+		top: 19px
+		left: 0px
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 14px 47.5px 0 47.5px
+		border-color: $accent transparent transparent transparent
 .feedback-sec
 	&>.container
 		background: #f3f3f3
@@ -1475,7 +1479,7 @@ html.mm-opening .mm-menu~.mm-slideout
 		padding-top: 4px
 		&>.container
 			background: #f3f3f3
-			padding: 30px 30px
+			padding: 30px 80px
 			padding-top: 60px
 			padding-bottom: 90px
 .lp-sec
@@ -1489,6 +1493,24 @@ html.mm-opening .mm-menu~.mm-slideout
 		padding-bottom: 0px!important
 	&.other-n
 		border: none
+	&.pred-n
+		border-bottom: solid 1px #e8e8e8
+		padding-bottom: 50px
+		.news-r
+			margin: 0 -20px
+			.news-c
+				padding: 0 20px
+				.news-i
+					.content p
+						font-size: 14px
+					.title-n
+						margin-top: 10px
+					.prev-c 
+						.prev
+							height: 38px
+							background-image: none!important
+							background: #ffffff
+
 	&.other-n, &.type-p
 		&>.container
 			padding-bottom: 30px
@@ -1547,6 +1569,11 @@ html.mm-opening .mm-menu~.mm-slideout
 	.slick-prev
 		left: 40px
 
+.princip-slider
+	max-width: 100%
+	.item
+		display: block
+	
 .close-btn-menu
 	position: fixed
 	top: 5%
@@ -1637,6 +1664,7 @@ html.mm-opening .mm-menu~.mm-slideout
 			background: #ffffff
 			width: 18px
 			height: 3px
+			left: 0px
 		.hamburger-box
 			width: 18px
 	.btn-accent
@@ -1847,6 +1875,17 @@ html.mm-opening .mm-menu~.mm-slideout
 		padding: 0 80px
 		padding-bottom: 82px
 		padding-top: 60px
+.padding-small
+	padding-bottom: 4px
+	padding-top: 4px
+
+.date-typepage
+	.container
+		position: relative
+		padding-top: 80px
+	.date-b
+		left: 30px
+
 /*Project end*/
 
 
