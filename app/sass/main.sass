@@ -145,10 +145,10 @@ input
 		opacity: 1
 @keyframes fade-translateLeft
 	0%
-		transform: translate3d(-50px, -50%, 0px)
+		transform: translate3d(0px, -50%, 0px)
 		opacity: 0
 	50%
-		transform: translate3d(-50px, -50%, 0px)
+		transform: translate3d(0px, -50%, 0px)
 		opacity: 0
 	100%
 		transform: translate3d(0px, -50%, 0px)
@@ -269,7 +269,7 @@ input
 html.mm-opening .mm-menu~.mm-slideout
 	transform: translate(0px,0)!important
 	transform: translate3d(0,0,0)!important
-#my-menu
+#my-menu, #my-menu2
 	background: rgba(#ffffff, 0.7)
 	z-index: 12
 	top: 50px
@@ -350,6 +350,7 @@ html.mm-opening .mm-menu~.mm-slideout
 	display: flex
 	align-items: center
 	justify-content: center
+
 .content
 	overflow-x: hidden
 	h1
@@ -1208,6 +1209,7 @@ html.mm-opening .mm-menu~.mm-slideout
 			height: 100%
 			padding-top: 40px
 			.content
+				width: 100%
 				ul
 					list-style: none
 					margin-top: 20px
@@ -1362,6 +1364,7 @@ html.mm-opening .mm-menu~.mm-slideout
 				flex-direction: column
 				justify-content: space-between
 				height: 100%
+				width: 100%
 				.title-n
 					font-size: 16px
 					font-weight: 600
@@ -1475,6 +1478,43 @@ html.mm-opening .mm-menu~.mm-slideout
 	.slick-prev
 		left: 40px
 
+.close-btn-menu
+	position: fixed
+	top: 5%
+	right: 5%
+	background: rgba($accent, 0.5)
+	text-indent: -9999px
+	width: 50px
+	height: 50px
+	-webkit-border-radius: 50%
+	border-radius: 50%
+	border: 0
+	overflow: hidden
+	-webkit-transition: background-color .2s ease 0s,-webkit-transform .2s ease-in-out
+	transition: background-color .2s ease 0s,-webkit-transform .2s ease-in-out
+	-o-transition: background-color .2s ease 0s,transform .2s ease-in-out
+	transition: background-color .2s ease 0s,transform .2s ease-in-out
+	transition: background-color .2s ease 0s,transform .2s ease-in-out,-webkit-transform .2s ease-in-out
+	z-index: 99999
+	cursor: pointer
+	outline: 0
+	&:before, &:after
+		content: ""
+		position: absolute
+		left: 12px
+		top: 24px
+		width: 26px
+		height: 1.5px
+		background: #ffffff
+	&:before
+		-ms-transform: rotate(-45deg)
+		-webkit-transform: rotate(-45deg)
+		transform: rotate(-45deg)
+	&:after
+		-ms-transform: rotate(45deg)
+		-webkit-transform: rotate(45deg)
+		transform: rotate(45deg)
+
 .map-sec
 	padding-bottom: 0px
 	.map-i
@@ -1504,7 +1544,43 @@ html.mm-opening .mm-menu~.mm-slideout
 		display: flex
 		align-items: center
 
-
+.leftside-block
+	position: fixed
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	top: 32px
+	left: 32px
+	display: none
+	animation: fadeEffect .3s ease
+	z-index: 10
+	&.active
+		display: flex
+	.menu-m-b
+		background: $accent2
+		width: 33px
+		height: 33px
+		border-radius: 3px
+		margin-bottom: 7px
+		display: flex
+		justify-content: center
+		.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+			background: #ffffff
+			width: 18px
+			height: 3px
+		.hamburger-box
+			width: 18px
+	.btn-accent
+		padding: 10px
+		text-align: center
+		justify-content: center
+		border-radius: 3px
+		width: 33px
+		height: 33px
+		.svg-c
+			margin-right: 0px
+	.btn-c
+		text-align: center
 #my-footer
 	padding: 15px 0px
 	p
@@ -1517,6 +1593,14 @@ html.mm-opening .mm-menu~.mm-slideout
 		color: $accent
 		&:hover
 			text-decoration: none
+
+//sticky sidebar start
+#my-menu2
+	height: 100vh!important
+	top: 0px
+//sticky sidebar end
+
+
 /*Project end*/
 
 

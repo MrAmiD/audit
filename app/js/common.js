@@ -42,6 +42,7 @@ function MainSliderInit(){//слайдер на главной странице
         slider[0].slick.slickGoTo(parseInt(slideIndex));
 
     });
+    
 
 
 }
@@ -122,6 +123,24 @@ function feedbackSliderInit(){//слайдер на главной страни�
         '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="9px" height="15px"> <path fill-rule="evenodd"  fill="rgb(0, 0, 0)" d="M-0.006,13.967 C0.029,13.939 0.066,13.913 0.097,13.881 C2.195,11.825 4.291,9.769 6.388,7.712 C6.420,7.681 6.451,7.648 6.492,7.605 C6.453,7.563 6.418,7.523 6.379,7.486 C4.290,5.436 2.201,3.387 0.110,1.338 C0.076,1.304 0.033,1.277 -0.006,1.248 C-0.006,1.218 -0.006,1.188 -0.006,1.158 C0.141,1.021 0.290,0.887 0.434,0.747 C0.695,0.494 0.952,0.239 1.194,-0.000 C3.790,2.545 6.379,5.083 9.005,7.657 C8.983,7.669 8.925,7.688 8.886,7.726 C6.456,10.107 4.027,12.489 1.598,14.871 C1.429,15.037 1.028,15.038 0.860,14.874 C0.572,14.592 0.283,14.309 -0.006,14.027 C-0.006,14.007 -0.006,13.987 -0.006,13.967 Z"/></svg>' +
         '</button>'
     });
+}
+
+$(document).on('click', '.js-popupbtn', function () {
+    try {
+        if($(this).data().fb != null && $(this).data().fb != undefined && $(this).data().title != undefined && $(this).data().title != null )
+            $($(this).data().fb).find('.fb-title').text($(this).data().title);
+    } catch(e) {
+        console.error('Ошибка при смене заголовка во всплывашке, принудительное закрытие всех всплывашек' + e.name + ":" + e.message + "\n" + e.stack);
+        $.fancybox.close();
+    }
+});
+
+function showLeftBar() {
+    if($(window).scrollTop() > $('#my-content').offset().top){
+        $('.leftside-block').addClass('active');
+    } else {
+        $('.leftside-block').removeClass('active');
+    }
 }
 
 $(function() {
@@ -219,4 +238,36 @@ $(function() {
         //bugfix fixed menu 3 END
         $("#my-header").css({ top: 0});
     });
+
+
+    $('#my-menu2').append($('.main-menu').html());
+
+    //var  socials = $("#my-menu").data();
+    $("#my-menu2").mmenu({
+        "extensions": [
+            "fx-panels-none",
+            "fx-listitems-slide"
+        ],
+        "offCanvas": {
+            "position": "bottom"
+        },
+        "navbar": {
+            "title": ""
+        },
+        "pageScroll": true
+    });
+
+    var api2 = $("#my-menu2").data( "mmenu" );
+
+    $(document).on('click', '.close-btn-menu', function () {
+        api2.close();
+    });
+
+    $(window).scroll(function() {
+        showLeftBar();
+    });
+    $(window).resize(function () {
+			showLeftBar();
+    });
+
 });
