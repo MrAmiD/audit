@@ -493,11 +493,26 @@ html.mm-opening .mm-menu~.mm-slideout
 		padding-left: 0px
 		margin-top: 20px
 		li
-			font-weight: 700
+			font-weight: 400
+			position: relative
+			font-size: 14px
+			margin-bottom: 15px
+			line-height: 1.7
 			&:before
-				content: counter(item) ') '
+				content: counter(item)
 				counter-increment: item
-
+				color: #ffffff
+				background: $accent2
+				font-weight: 700
+				font-family: $default-font
+				border-radius: 100px
+				min-width: 18px
+				min-height: 18px
+				display: inline-block
+				text-align: center
+				font-size: 12px
+				line-height: 18px
+				margin-right: 10px
 .breadcrumb
 	padding: 0
 	list-style: none
@@ -1911,6 +1926,28 @@ html.mm-opening .mm-menu~.mm-slideout
 		padding: 30px 30px
 	.short-hr
 		margin-bottom: 45px
+
+.err404-sec
+	border-bottom: solid 1px #e8e8e8
+	padding-bottom: 60px
+	.err-r
+		align-items: center
+		margin-bottom: 45px
+		.h1
+			font-size: 302px
+			font-weight: 900
+			color: $accent
+			line-height: 1
+		.h2
+			font-size: 103px
+			font-weight: 200
+			margin-top: 73px
+	p
+		font-size: 14px
+		font-weight: 400
+	a
+		color: $accent
+		text-decoration: underline
 /*Project end*/
 
 
