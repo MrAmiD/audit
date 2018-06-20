@@ -2,14 +2,30 @@
 
 /*Новые стили писать ЗДЕСЬ, ПЕРЕД МЕДИА ЗАПРОСАМИ*/
 
+.service-list-i .content ul li a{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.service-list-i .content a {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.content p {
+    font-size: 16px;
+}
 
 
+.expres-r .expres-c .expres-i:hover .title-sv{
+	font-weight: 700;
+}
 
+.mission span{
+font-size: 30px;
+font-weight: 700;
 
-
-
-
-
+}
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */

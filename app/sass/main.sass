@@ -376,6 +376,7 @@ html.mm-opening .mm-menu~.mm-slideout
 	h3
 		font-size: 24px
 		margin-top: 30px
+		margin-bottom: 20px
 		color: $dark
 		line-height: normal
 		font-weight: 700
@@ -408,7 +409,7 @@ html.mm-opening .mm-menu~.mm-slideout
 		margin-bottom: 20px
 		font-weight: 500
 		line-height: normal
-	a
+	a:not(.btn-accent)
 		color: $accent
 		&:hover, &:focus
 			text-decoration: underline
@@ -795,11 +796,12 @@ html.mm-opening .mm-menu~.mm-slideout
 	text-align: right
 	padding: 17px 45px
 	border-radius: 115px
+	border-radius: 10px
 	color: #FFFFFF
 	display: inline-flex
 	align-items: center
 	justify-content: center
-	font-size: 11px
+	font-size: 12px
 	font-weight: 700
 	cursor: pointer
 	text-transform: uppercase
@@ -810,6 +812,9 @@ html.mm-opening .mm-menu~.mm-slideout
 		padding: 7px 45px
 	.svg-c
 		margin-right: 15px
+		svg
+			path
+				fill: #FFFFFF
 	&:hover, &:focus
 		background: $dark
 		color: #FFFFFF
@@ -1095,6 +1100,9 @@ html.mm-opening .mm-menu~.mm-slideout
 	.svg-c
 		display: flex
 		align-items: center
+		svg
+			path
+				fill: $accent
 	a
 		font-size: 27px
 		font-weight: 700
@@ -1155,11 +1163,13 @@ html.mm-opening .mm-menu~.mm-slideout
 		margin: 0 auto 20px
 		left: 50%
 		transform: translateX(-50%)
-		animation: ani-mouse 2s linear infinite
+		//animation: ani-mouse 2s linear infinite
 		cursor: pointer
 
 .standart-sec
-	padding: 65px 0px
+	padding: 15px 0px
+	&.stat-p
+		padding-top: 0px!important
 	.h2
 		font-size: 36px
 	.discr
@@ -1357,7 +1367,8 @@ html.mm-opening .mm-menu~.mm-slideout
 					position: absolute
 					left: 0px
 					top: 0px
-					
+					path
+						fill: $accent
 			p
 				margin: 0px
 				font-size: 16px
@@ -1501,7 +1512,7 @@ html.mm-opening .mm-menu~.mm-slideout
 	&>.container
 		background: #f3f3f3
 		padding: 30px 30px
-		padding-bottom: 137px
+		padding-bottom: 90px!important
 	&.fb-n
 		padding-top: 4px
 		&>.container
@@ -1538,7 +1549,7 @@ html.mm-opening .mm-menu~.mm-slideout
 							background-image: none!important
 							background: #ffffff
 
-	&.other-n, &.type-p
+	&.other-n, &.type-p, &.escort-sec, &.news-sec
 		&>.container
 			padding-bottom: 30px
 	&.type-p
@@ -1644,6 +1655,7 @@ html.mm-opening .mm-menu~.mm-slideout
 		transform: rotate(45deg)
 
 .map-sec
+	padding-top: 35px
 	padding-bottom: 0px
 	.map-i
 		height: 580px
@@ -1665,13 +1677,18 @@ html.mm-opening .mm-menu~.mm-slideout
 		.logo-c
 			margin-bottom: 50px
 			text-align: center
+			img
+				max-width: 100%
 	.h3
 		font-size: 20px
 		text-align: left
 		height: 100%
 		display: flex
 		align-items: center
-
+		padding-bottom: 30px
+.logo-c
+	img
+		max-width: 100%
 .leftside-block
 	position: fixed
 	flex-direction: column
@@ -1792,7 +1809,7 @@ html.mm-opening .mm-menu~.mm-slideout
 				display: flex
 				align-items: center
 			.content
-				a
+				a:not(.btn-accent)
 					color: $accent2
 
 .fb-b-sec
@@ -1836,7 +1853,7 @@ html.mm-opening .mm-menu~.mm-slideout
 	margin-top: 15px
 
 #my-content
-	min-height: 80vh
+	min-height: 74vh
 
 .contact-page
 	border-bottom: solid 1px #efefef
@@ -1897,6 +1914,7 @@ html.mm-opening .mm-menu~.mm-slideout
 			margin-top: 0px
 		p
 			font-weight: 600
+			font-size: 22px
 
 .princip-sec
 	padding: 4px 0px
@@ -1948,6 +1966,46 @@ html.mm-opening .mm-menu~.mm-slideout
 	a
 		color: $accent
 		text-decoration: underline
+
+.menuClicker
+	li
+		a
+			color: #294664!important
+			font-weight: bold
+.ClickerH
+	margin: 0px!important
+
+.type-bg
+	background-size: cover
+	min-height: 210px
+	display: flex
+	align-items: center
+	background-position: center
+	background-repeat: no-repeat
+	position: relative
+	.container
+		position: relative
+		z-index: 1
+	&:after
+		content: ''
+		background: #697a92
+		position: absolute
+		top: 0px
+		bottom: 0px
+		left: 0px
+		right: 0px
+		opacity: 0.5
+	.row
+		align-items: center
+	.h2
+		color: #FFFFFF
+		font-size: 36px
+		margin: 0px
+
+.svg-c
+	path
+		fill: $accent
+
 /*Project end*/
 
 

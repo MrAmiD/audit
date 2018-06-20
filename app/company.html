@@ -185,7 +185,26 @@
             </div>
         </div>
     </div>
-
+    <section class="standart-sec lp-sec type-p company-p">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="content">
+                        <h3 class="ClickerH">
+                            Содержание
+                        </h3>
+                        <ul class="menuClicker">
+                            <li>
+                                <a href="javascript: void(0);">
+                                    О компании
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="standart-sec lp-sec type-p company-p">
         <div class="container">
             <div class="row">
@@ -200,6 +219,9 @@
             </div>
 
             <div class="row comp-gal-r">
+
+
+
                 <div class="col-12 col-lg-6 comp-img-cc">
                     <div class="row comp-img-r">
                         <div class="col-12">
@@ -267,8 +289,7 @@
 
         </div>
     </section>
-
-    <section class="standart-sec princip-sec">
+    <section class="js-clicker standart-sec princip-sec">
         <div class="container">
 
             <div class="row">
@@ -320,8 +341,7 @@
             </div>
         </div>
     </section>
-
-    <section class="standart-sec feedback-sec lp-sec fb-n">
+    <section class="js-clicker standart-sec feedback-sec lp-sec fb-n">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -413,8 +433,7 @@
 
         </div>
     </section>
-
-    <section class="standart-sec map-sec">
+    <section class="js-clicker standart-sec map-sec">
         <div class="container">
 
             <div class="row">
@@ -563,10 +582,30 @@
     /*For this page START*/
     principSliderInit();
     feedbackSliderInit();
+
+
+    $(document).on('click', '.menuClicker li', function () {
+        $("html, body").animate({ scrollTop: $('.js-clicker').eq($(this).index()).offset().top + 20 }, 600);
+    });
+
     /*For this page END*/
 
     /*For all pages START*/
+
+    function menuClickerInit() {
+        var menuItemTpl = $('.menuClicker').clone();
+        $('.menuClicker').html('');
+        document.querySelectorAll('.js-clicker').forEach(function (value, index) {
+            console.log('menuItemTpl', menuItemTpl.html());
+            menuItemTpl.find('a').text($(value).find('.h2').eq(0).text());
+            $('.menuClicker').append(menuItemTpl.html());
+        });
+    }
+
     $(function() {
+
+        menuClickerInit();
+
         $('input[type="tel"]').mask("+7 (999) 999-9999");
     });
     /*For all pages END*/

@@ -131,6 +131,8 @@ function principSliderInit(){//слайдер на главной страниц
         slidesToScroll: 1,
         arrows: false,
         dots: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
         responsive: [
             {
                 breakpoint: 768,
@@ -138,6 +140,7 @@ function principSliderInit(){//слайдер на главной страниц
                     arrows: false,
                     dots: true,
                     slidesToShow: 1,
+
                 }
             } 
         ],
